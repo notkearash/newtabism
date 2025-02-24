@@ -1,22 +1,23 @@
 import type { Metadata } from "next";
 import {
-  Rubik as FontSans,
+  Red_Hat_Text as FontSans,
   IBM_Plex_Mono as FontMono,
 } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/toaster";
 
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
-  weight: ["400", "600"],
+  weight: ["500", "600"],
 });
 
 const fontMono = FontMono({
   subsets: ["latin"],
   variable: "--font-mono",
-  weight: ["400", "600"],
+  weight: ["500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -33,7 +34,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-background text-foreground font-sans antialiased scroll-smooth",
+          "min-h-screen font-sans antialiased scroll-smooth",
           fontSans.variable,
           fontMono.variable
         )}
@@ -45,6 +46,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
