@@ -1,15 +1,16 @@
 "use client";
 
-import { Clock } from "@/components/clock";
-import { ModeToggle } from "@/components/mode-toggle";
-import { WidgetCard } from "@/components/widget-card";
+import React from "react";
 import {
   DragDropContext,
   Droppable,
   DroppableProvided,
   DropResult,
 } from "@hello-pangea/dnd";
-import React from "react";
+import { Clock } from "@/components/widgets/clock";
+import { ModeToggle } from "@/components/mode-toggle";
+import { WidgetCard } from "@/components/widget-card";
+import { Weather } from "@/components/widgets/weather";
 
 function Dashboard() {
   const onDragEnd = (result: DropResult) => {
@@ -26,6 +27,9 @@ function Dashboard() {
           >
             <WidgetCard id={"0"} index={0} onDelete={() => {}}>
               <Clock />
+            </WidgetCard>
+            <WidgetCard id={"1"} index={1} onDelete={() => {}}>
+              <Weather />
             </WidgetCard>
             {provided.placeholder}
           </main>

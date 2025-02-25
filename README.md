@@ -1,10 +1,11 @@
-NextJS v15 + ShadcnUI template with some personal tweaks including:
+# Newtabism
 
-- Replaced the init bloatware with theme and font inspector
-- Some quirks and components in tailwind.config
-- SSG by default
+Your New Tab Page now comes in Neobrutalism!
+
+![Clock Screenshot](./ss.png)
 
 Todo:
 
-- [x] Add and configure theme switcher
-
+- [ ] Shift the configurations to a dialog or a seperated user path
+- [ ] Change the Weather widget stylings
+- [ ] Error Handling for Weather
