@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import type React from "react";
 import { Draggable } from "@hello-pangea/dnd";
@@ -25,10 +25,9 @@ const WidgetCard: React.FC<WidgetCardProps> = ({
           ref={provided.innerRef}
           {...provided.draggableProps}
           {...provided.dragHandleProps}
-          className="relative bg-card p-6 rounded-lg border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
+          className="relative rounded-base shadow-shadow border-2 border-border text-text p-6 w-full hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none transition-all cursor-grab bg-bw"
         >
           <Button
-            variant="ghost"
             size="icon"
             className="absolute top-2 right-2"
             onClick={() => onDelete(id)}

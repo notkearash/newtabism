@@ -34,7 +34,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen font-sans antialiased scroll-smooth",
+          "font-sans antialiased scroll-smooth",
           fontSans.variable,
           fontMono.variable
         )}

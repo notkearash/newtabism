@@ -8,6 +8,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { CardTitle } from "./ui/card";
+import { IconClock12, IconClock24 } from "@tabler/icons-react";
 
 export function Clock() {
   const [time, setTime] = useState(new Date());
@@ -38,18 +40,22 @@ export function Clock() {
 
   return (
     <div>
-      <h2 className="text-2xl font-bold mb-4">Clock</h2>
+      <CardTitle className="text-2xl font-bold mb-4">Clock</CardTitle>
       <div className="text-5xl font-bold mb-4">{formatTime(time)}</div>
       <Select
         value={format}
         onValueChange={(value: "12" | "24") => setFormat(value)}
       >
-        <SelectTrigger className="w-full">
+        <SelectTrigger className="w-fit">
           <SelectValue placeholder="Time format" />
         </SelectTrigger>
         <SelectContent>
-          <SelectItem value="12">12-hour</SelectItem>
-          <SelectItem value="24">24-hour</SelectItem>
+          <SelectItem value="12">
+            <IconClock12 />
+          </SelectItem>
+          <SelectItem value="24">
+            <IconClock24 />
+          </SelectItem>
         </SelectContent>
       </Select>
     </div>

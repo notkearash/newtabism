@@ -1,6 +1,7 @@
 "use client";
 
 import { Clock } from "@/components/clock";
+// import { ModeToggle } from "@/components/mode-toggle";
 import { WidgetCard } from "@/components/widget-card";
 import {
   DragDropContext,
@@ -21,7 +22,7 @@ function Dashboard() {
           <main
             {...provided.droppableProps}
             ref={provided.innerRef}
-            className="grid grid-cols-1 gap-8"
+            className="grid grid-cols-1 gap-8 w-full place-items-center"
           >
             <WidgetCard id={"0"} index={0} onDelete={() => {}}>
               <Clock />
@@ -36,7 +37,7 @@ function Dashboard() {
 
 export default function HomePage() {
   return (
-    <div className="flex justify-center items-center max-w-xl mt-8">
+    <div className="flex justify-center items-center max-w-md mx-auto mt-8">
       {/* <ModeToggle /> */}
       <Dashboard />
     </div>
