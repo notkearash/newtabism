@@ -1,7 +1,7 @@
 "use client";
 
 import { Clock } from "@/components/clock";
-// import { ModeToggle } from "@/components/mode-toggle";
+import { ModeToggle } from "@/components/mode-toggle";
 import { WidgetCard } from "@/components/widget-card";
 import {
   DragDropContext,
@@ -37,9 +37,13 @@ function Dashboard() {
 
 export default function HomePage() {
   return (
-    <div className="flex justify-center items-center max-w-md mx-auto mt-8">
-      {/* <ModeToggle /> */}
-      <Dashboard />
+    <div className="flex justify-center items-center max-w-lg mx-auto mt-8 h-[90svh]">
+      <div className="w-11/12">
+        <Dashboard />
+        <div className="absolute bottom-4 right-4">
+          <ModeToggle />
+        </div>
+      </div>
     </div>
   );
 }

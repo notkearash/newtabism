@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import {
   Red_Hat_Text as FontSans,
-  IBM_Plex_Mono as FontMono,
+  Space_Mono as FontMono,
 } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
@@ -17,7 +17,7 @@ const fontSans = FontSans({
 const fontMono = FontMono({
   subsets: ["latin"],
   variable: "--font-mono",
-  weight: ["500", "600"],
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
