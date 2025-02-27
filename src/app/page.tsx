@@ -10,7 +10,7 @@ import {
 import { Clock } from "@/components/widgets/clock";
 import { ModeToggle } from "@/components/mode-toggle";
 import { WidgetCard } from "@/components/widget-card";
-import { Weather } from "@/components/widgets/weather";
+import { BookmarkList } from "@/components/widgets/bookmarks";
 
 function Dashboard() {
   const onDragEnd = (result: DropResult) => {
@@ -29,7 +29,7 @@ function Dashboard() {
               <Clock />
             </WidgetCard>
             <WidgetCard id={"1"} index={1} onDelete={() => {}}>
-              <Weather />
+              <BookmarkList />
             </WidgetCard>
             {provided.placeholder}
           </main>

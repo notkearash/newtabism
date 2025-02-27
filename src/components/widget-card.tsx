@@ -28,6 +28,7 @@ const WidgetCard: React.FC<WidgetCardProps> = ({
           className="relative rounded-base shadow-shadow border-2 border-border text-text p-6 w-full hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none transition-all cursor-grab bg-bw"
         >
           <Button
+            variant={"neutral"}
             size="icon"
             className="absolute top-2 right-2"
             onClick={() => onDelete(id)}

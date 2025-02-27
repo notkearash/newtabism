@@ -23,7 +23,7 @@ type WeatherData = {
 };
 
 const API_KEYS = {
-  weatherapi: "YOUR_WEATHER_API_KEY",
+  weatherapi: process.env.NEXT_PUBLIC_WEATHER_API_KEY,
 };
 
 export function Weather() {

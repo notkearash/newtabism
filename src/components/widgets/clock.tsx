@@ -44,7 +44,7 @@ export function Clock() {
         <IconClock />
         Clock
       </CardTitle>
-      <div className="text-2xl md:text-3xl lg:text-5xwl text-center font-mono my-4 bg-main p-4 rounded-full text-mtext border-border shadow-shadow border-2">
+      <div className="text-3xl text-center font-mono my-4 bg-main p-4 rounded-full text-mtext border-border shadow-shadow border-2">
         {formatTime(time)}
       </div>
       <Select
