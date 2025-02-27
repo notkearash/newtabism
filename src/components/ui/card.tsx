@@ -1,5 +1,4 @@
 import * as React from "react";
-import { IconGripVertical } from "@tabler/icons-react";
 
 import { cn } from "@/lib/utils";
 
@@ -44,7 +43,6 @@ const CardTitle = React.forwardRef<
     )}
     {...props}
   >
-    <IconGripVertical opacity={50} className="opacity-50" />
     {children}
   </div>
 ));
